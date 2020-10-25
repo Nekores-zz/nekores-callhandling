@@ -1,0 +1,10 @@
+{
+  "uploadReport": "Upload report",
+  "reportsCount": "Reports ({{count}})",
+  "viewSampleReport": "View Sample Report",
+  "tags": "Tags",
+  "sampleReport": "Sample Report",
+  "reportParameters": "Report Parameters",
+  "callSummaryForBilling": "Call Summary for billing",
+  "reportName": "Report Name"
+}

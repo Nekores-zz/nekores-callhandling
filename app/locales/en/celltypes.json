@@ -1,0 +1,16 @@
+{
+  "from": "From {{date,HH:mm DD MMM, YYYY}}",
+  "updatedAt": "{{date,HH:mm DD MMM, YYYY}}",
+  "default": "Default",
+  "exception": "Exception",
+  "otherVersions": "Other versions",
+  "activeVersions": "Active versions",
+  "composedOf": "Composed of",
+  "roles": "Roles",
+  "versionName": "Version {{majorVersion}}.{{minorVersion}}",
+  "Available": "Available",
+  "Active": "Active",
+  "roleDescription": "Composed of {{count}} {{role}}",
+  "role": "Role",
+  "role_plural": "Roles"
+}

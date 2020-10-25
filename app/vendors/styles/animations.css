@@ -1,0 +1,118 @@
+.linear-progress-animated {
+  background-image: -webkit-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.125) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.125) 50%,
+    rgba(255, 255, 255, 0.125) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.125) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.125) 50%,
+    rgba(255, 255, 255, 0.125) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 35px 35px;
+  -webkit-animation: cssProgressActive 2s linear infinite;
+  -ms-animation: cssProgressActive 2s linear infinite;
+  animation: cssProgressActive 2s linear infinite;
+}
+
+@-webkit-keyframes cssProgressActive {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 35px 35px;
+  }
+}
+@-ms-keyframes cssProgressActive {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 35px 35px;
+  }
+}
+
+@keyframes cssProgressActive {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 35px 35px;
+  }
+}
+
+/* SPIN */
+._spinner {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 1000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 1000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+@-webkit-keyframes cssProgressGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9;
+  }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9;
+  }
+}
+@-ms-keyframes cssProgressGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9;
+  }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9;
+  }
+}
+@keyframes cssProgressGlowActive1 {
+  0%, 100% {
+    box-shadow: 5px 0px 15px 0px #3798D9;
+  }
+  45% {
+    box-shadow: 1px 0px 4px 0px #3798D9;
+  }
+} */

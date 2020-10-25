@@ -1,0 +1,122 @@
+{
+  "name": "hubbub-front-end",
+  "version": "1.0.0",
+  "description": "Hubbub UI React App",
+  "sideEffects": false,
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --host 0.0.0.0 --port 8082",
+    "clean": "rimraf dist",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "lint": "eslint ./app/**/**.js",
+    "prettier-watch": "onchange '**/*.js*' -- prettier --write {{changed}}",
+    "build:stats": "webpack --env production --json > stats.json"
+  },
+  "author": "Call Handling Services",
+  "private": true,
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/jest/shim.js"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx,ts,tsx}"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/config/jest/assetsTransformer.js"
+    },
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "transform": {
+      "\\.js$": "babel-jest"
+    }
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@date-io/moment": "^1.3.5",
+    "@material-ui/core": "3.9.1",
+    "@material-ui/lab": "^3.0.0-alpha.30",
+    "@types/recompose": "0.26.1",
+    "acorn": "^6.3.0",
+    "clsx": "1.0.3",
+    "i18next": "11.3.2",
+    "i18next-browser-languagedetector": "2.2.0",
+    "material-ui-chip-input": "^1.0.0-beta.14",
+    "material-ui-pickers": "2.2.4",
+    "material-ui-slider": "^3.0.8",
+    "moment": "^2.24.0",
+    "react": "^16.9.0",
+    "react-beautiful-dnd": "^12.1.1",
+    "react-custom-scrollbars": "4.2.1",
+    "react-dom": "16.9.0",
+    "react-google-charts": "^2.0.29",
+    "react-i18next": "7.6.1",
+    "react-jss": "^8.6.1",
+    "react-lines-ellipsis": "^0.13.2",
+    "react-loadable": "^5.5.0",
+    "react-popper": "0.10.4",
+    "react-router-dom": "4.2.2",
+    "react-router-hooks": "^1.0.1",
+    "react-scroll": "1.7.9",
+    "react-select": "1.2.1",
+    "react-table": "^6.10.3",
+    "react-table-hoc-fixed-columns": "^2.1.2",
+    "react-text-mask": "^5.4.3",
+    "recompose": "0.27.1",
+    "validator": "9.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "7.0.0-beta.46",
+    "ajv": "^6.9.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "babel-runtime": "6.26.0",
+    "copy-webpack-plugin": "4.6.0",
+    "core-js": "^3.4.0",
+    "cross-env": "5.1.2",
+    "css-loader": "0.28.9",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.5.1",
+    "file-loader": "2.0.0",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "0.15.0-rc.2",
+    "jest": "22.1.0",
+    "mini-css-extract-plugin": "0.4.4",
+    "node-sass": "4.12.0",
+    "npm": "^6.13.0",
+    "onchange": "^5.2.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "prettier": "1.17.0",
+    "react-hot-loader": "^4.6.5",
+    "react-test-renderer": "16.2.0",
+    "rimraf": "2.6.2",
+    "sass-loader": "6.0.6",
+    "sockjs-client": "^1.1.4",
+    "style-loader": "0.20.0",
+    "terser-webpack-plugin": "^2.1.2",
+    "url-loader": "0.6.2",
+    "webpack": "4.23.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "3.3.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
